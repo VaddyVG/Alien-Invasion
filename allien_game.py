@@ -8,6 +8,7 @@ from game_stats import GameStats
 from scoreboard import Scoreboard
 import game_functions as gf
 
+
 def run_game():
     pygame.init()
     ai_settings = Settings()
@@ -28,8 +29,8 @@ def run_game():
             gf.bullets_update(ai_settings, screen, stats, sb, ship, aliens, bullets)
             gf.update_aliens(ai_settings, screen, stats, sb, ship, aliens, bullets)
             gf.update_screen(ai_settings, screen, stats, sb, ship, aliens, bullets, play_button)
-        
-        
+
+
 if __name__ == "__main__":
     run_game()
 

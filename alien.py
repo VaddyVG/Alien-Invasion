@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Alien(Sprite):
     '''Класс представляющий одного пришельца'''
     def __init__(self, ai_settings, screen):
@@ -19,17 +20,18 @@ class Alien(Sprite):
         
         # Сохраняет абсолютную позицию пришельца
         self.x = float(self.rect.x)
-        
+
+
     def update(self):
         '''Перемещение пришельца вправо или влево'''
         self.x += (self.ai_settings.alien_speed_factor * 
                    self.ai_settings.fleet_direction)
         self.rect.x = self.x
-        
+
     def blitme(self):
         '''Рисует пришельца в текущей позиции'''
         self.screen.blit(self.image, self.rect)
-        
+
     def check_edges(self):
         '''Возвращает True, если пришелец у края экрана'''
         screen_rect = self.screen.get_rect()
@@ -37,11 +39,3 @@ class Alien(Sprite):
             return True
         elif self.rect.left <= 0:
             return True
-        
-
-        
-        
-            
-            
-            
-    

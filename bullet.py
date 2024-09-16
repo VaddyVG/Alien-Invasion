@@ -1,6 +1,7 @@
 import pygame
 from pygame.sprite import Sprite
 
+
 class Bullet(Sprite):
     """Класс для управления пулей, выпущенной кораблем"""   
     def __init__(self, ai_settings, screen, ship):
@@ -18,12 +19,14 @@ class Bullet(Sprite):
         self.y = float(self.rect.y)
         self.color = ai_settings.bullet_color
         self.speed_factor = ai_settings.bullet_speed_factor
-        
+
+
     def update(self):
         '''Перемещает пулю вверх по экрану'''
         self.y -= self.speed_factor
         self.rect.y = self.y
-        
+
+
     def draw_bullet(self):
         '''Отображает пулю на экране'''
         pygame.draw.rect(self.screen, self.color, self.rect)
