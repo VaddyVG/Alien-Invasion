@@ -24,7 +24,7 @@
     ```bash
     pip install -r requirements.txt
     ```
-    Если файла requirements.txt нет, можно установить Pygame вручную:
+    Так же можно установить Pygame вручную:
     ```bash
     pip install pygame
 
